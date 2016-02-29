@@ -1,16 +1,15 @@
+## @param directory
+##	Character vector of length 1 indicating the
+##	location of the CSV files.
+##
+## @param id
+##	Integer vector indicating monitor id numbers to be used.
+##	Default value is 1:332 (seq_len(332)).
+##
+## @return
+##	A data frame with columns "id" and "nobs," where id is the
+##	monitor ID number, and nobs is the number of complete cases.
 complete <- function(directory, id = 1:332) {
-	## @param directory
-	##	Character vector of length 1 indicating the
-	##	location of the CSV files.
-	##
-	## @param id
-	##	Integer vector indicating monitor id numbers to be used.
-	##	Default value is 1:332 (seq_len(332)).
-	##
-	## @return
-	##	A data frame with columns "id" and "nobs," where id is the
-	##	monitor ID number, and nobs is the number of complete cases.	
-
 	output <- data.frame()
 
 	for (i in id) {
